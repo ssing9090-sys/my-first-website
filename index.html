@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 첫 번째 웹사이트</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background: linear-gradient(135deg, #1976d2, #7b1fa2);
+      color: #333;
+    }
+    .card {
+      width: 100%;
+      max-width: 480px;
+      padding: 40px 28px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 12px; color: #1976d2; }
+    p { line-height: 1.7; margin-bottom: 24px; }
+    a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: #1976d2;
+      color: #fff;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+    @media (max-width: 480px) {
+      .card { padding: 28px 20px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>안녕하세요! 👋</h1>
+    <p>나의 첫 번째 웹사이트에 오신 것을 환영합니다.<br>Claude Code와 GitHub Pages로 만들었어요.</p>
+    <a href="https://github.com/ssing9090-sys/my-first-website">GitHub 보러가기</a>
+  </main>
+</body>
+</html>
