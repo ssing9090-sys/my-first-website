@@ -1,0 +1,28 @@
+.app {
+  min-height: 100vh;
+  padding: 48px 0 80px;
+}
+
+.app-header {
+  margin-bottom: 40px;
+}
+
+.app-empty {
+  text-align: center;
+  padding: 48px 0;
+}
+
+.section {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 24px 0 48px;
+  }
+
+  .section {
+    padding: 16px;
+  }
+}
