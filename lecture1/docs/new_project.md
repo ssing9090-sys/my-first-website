@@ -11,8 +11,8 @@
 
 ### 1. 백업 템플릿 존재 확인
 ```bash
-# _template_settings 디렉토리 존재 확인
-ls -la | grep _template_settings
+# 루트 폴더(현진이파일)에서 실행: lecture1/_template_settings 디렉토리 존재 확인
+ls -la lecture1 | grep _template_settings
 
 # 템플릿이 없는 경우, 사용자에게 안내:
 # "백업 템플릿이 없습니다. 먼저 기본 프로젝트를 생성하고 백업을 만들어주세요."
@@ -20,12 +20,12 @@ ls -la | grep _template_settings
 
 ### 2. 템플릿 복사 및 기본 설정
 ```bash
-# 1. 백업 템플릿을 새 프로젝트명으로 복사 (OS별 명령어)
+# 1. 백업 템플릿을 루트 폴더에 새 프로젝트명으로 복사 (OS별 명령어, 루트 폴더에서 실행)
 # Windows (PowerShell):
-powershell -Command "Copy-Item -Path '_template_settings\template-setup' -Destination '{프로젝트명}' -Recurse"
+powershell -Command "Copy-Item -Path 'lecture1\_template_settings' -Destination '{프로젝트명}' -Recurse"
 
 # macOS/Linux:
-cp -r _template_settings/template-setup {프로젝트명}
+cp -r lecture1/_template_settings {프로젝트명}
 
 # 2. 프로젝트 디렉토리로 이동
 cd {프로젝트명}
@@ -45,7 +45,7 @@ cd {프로젝트명}
 
 # 3. 불필요한 파일 정리
 rm -rf .git  # 기존 git 히스토리 제거 (필요시)
-rm -rf template-setup  # 중첩된 디렉토리 제거 (발생 시)
+rm -rf _template_settings  # 중첩된 템플릿 디렉토리 제거 (발생 시)
 ```
 
 ### 4. 패키지 확인 및 업데이트 (선택사항)
@@ -138,7 +138,7 @@ tree src/ -I node_modules
    - macOS/Linux: cp -r 사용
 
 3. **중첩된 디렉토리 문제**:
-   - 복사 과정에서 template-setup 디렉토리가 중첩되는 경우
+   - 같은 이름의 폴더가 이미 있으면 새 프로젝트 안에 _template_settings 디렉토리가 중첩되어 복사됨
    - 해당 디렉토리를 삭제하여 정리
 
 4. **node_modules 손상 시 대처**:
